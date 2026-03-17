@@ -1,0 +1,59 @@
+# Core Data Science Libraries
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.11.1
+
+# Machine Learning
+scikit-learn==1.3.0
+xgboost==1.7.6
+lightgbm==4.0.0
+
+# Deep Learning
+tensorflow==2.13.0
+keras==2.13.1
+torch==2.0.1
+torchvision==0.15.2
+
+# Time Series Analysis
+statsmodels==0.14.0
+prophet==1.1.4
+
+# Reinforcement Learning
+gym==0.26.2
+stable-baselines3==2.0.0
+
+# Data Visualization
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.15.0
+
+# Blockchain Integration
+web3==6.8.0
+# eth-brownie==1.19.3  # Commented out - conflicts with python-dotenv, not needed for core functionality
+py-solc-x==1.1.1
+
+# API and Web Framework
+flask==2.3.2
+fastapi==0.100.0
+uvicorn==0.23.1
+
+# Database
+sqlalchemy==2.0.19
+pymongo==4.4.1
+
+# Utilities
+python-dotenv>=0.16.0  # Flexible version to avoid conflicts
+pyyaml==6.0.1
+requests==2.31.0
+tqdm==4.65.0
+
+# Testing
+pytest==7.4.0
+pytest-cov==4.1.0
+
+# Logging and Monitoring
+loguru==0.7.0
+mlflow==2.5.0
+
+# Data Quality
+# great-expectations==0.17.10  # Commented out - version not available, not critical for core functionality

@@ -1,0 +1,20 @@
+\begin{table}[h]
+\centering
+\caption{Model Performance on Realistic Test Data}
+\begin{tabular}{lcccc}
+\hline
+Model & Accuracy & Precision & Recall & F1-Score \\
+\hline
+\textbf{Leakage Detector} & 1.000 & 1.000 & 1.000 & 1.000 \\
+\textbf{Corrosion Detector} & 0.998 & 0.992 & 0.880 & 0.932 \\
+\textbf{Overpressure Detector} & 1.000 & 0.957 & 1.000 & 0.978 \\
+\hline
+\multicolumn{5}{c}{\textit{Baseline Methods (Leakage)}} \\
+\hline
+Threshold & 0.970 & 0.400 & 1.000 & 0.571 \\
+Isolation Forest & 0.956 & 0.312 & 1.000 & 0.475 \\
+One-Class SVM & 0.915 & 0.088 & 0.345 & 0.140 \\
+\hline
+\end{tabular}
+\label{tab:performance}
+\end{table}

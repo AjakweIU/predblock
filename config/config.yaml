@@ -1,0 +1,124 @@
+# PredBlock Configuration File
+
+# Pipeline Parameters
+pipeline:
+  normal_pressure: 75  # bar
+  alert_pressure: 90   # bar
+  critical_pressure: 100  # bar
+  pressure_unit: "bar"
+  
+  normal_temperature: 25  # Celsius
+  max_temperature: 50     # Celsius
+  
+  flow_rate_min: 10   # kg/s
+  flow_rate_max: 100  # kg/s
+
+# Impurity Thresholds (ppmv)
+impurities:
+  H2O:
+    normal_max: 50
+    alert: 100
+    critical: 150
+    unit: "ppmv"
+  
+  H2S:
+    normal_max: 10
+    alert: 20
+    critical: 50
+    unit: "ppmv"
+  
+  SO2:
+    normal_max: 50
+    alert: 100
+    critical: 200
+    unit: "ppmv"
+  
+  O2:
+    normal_max: 10
+    alert: 15
+    critical: 25
+    unit: "ppmv"
+  
+  NOx:
+    normal_max: 50
+    alert: 80
+    critical: 120
+    unit: "ppmv"
+  
+  N2:
+    normal_max: 4
+    alert: 5
+    critical: 7
+    unit: "mol%"
+  
+  CH4:
+    normal_max: 2
+    alert: 3
+    critical: 5
+    unit: "mol%"
+
+# AI Model Configuration
+ai_models:
+  impurity_tracking:
+    model_type: "RandomForest"
+    features: ["pressure", "temperature", "flow_rate", "H2O", "SO2", "H2S", "O2", "NOx"]
+    target: "impurity_alert"
+    
+  corrosion_prediction:
+    model_type: "LSTM"
+    sequence_length: 24
+    features: ["H2O", "H2S", "SO2", "temperature", "acoustic_emission"]
+    target: "corrosion_risk"
+  
+  leakage_detection:
+    model_type: "AnomalyDetection"
+    algorithm: "IsolationForest"
+    contamination: 0.05
+    features: ["pressure", "flow_rate", "O2", "acoustic_emission", "vibration"]
+  
+  overpressure_control:
+    model_type: "ReinforcementLearning"
+    algorithm: "PPO"
+    state_space: ["pressure", "flow_rate", "temperature"]
+    action_space: ["valve_position"]
+
+# Blockchain Configuration
+blockchain:
+  network: "ethereum"
+  testnet: "sepolia"
+  gas_limit: 3000000
+  
+  smart_contracts:
+    monitoring_log: "MonitoringLog"
+    leakage_report: "LeakageReport"
+    alert_system: "AlertSystem"
+    maintenance_scheduler: "MaintenanceScheduler"
+
+# Data Simulation
+simulation:
+  duration_hours: 720  # 30 days
+  sampling_interval_seconds: 60
+  num_sensors: 10
+  anomaly_probability: 0.05
+
+# Evaluation Metrics
+evaluation:
+  ai_metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1_score"
+    - "roc_auc"
+    - "mean_absolute_error"
+  
+  blockchain_metrics:
+    - "latency"
+    - "throughput"
+    - "transaction_cost"
+    - "storage_efficiency"
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/predblock.log"

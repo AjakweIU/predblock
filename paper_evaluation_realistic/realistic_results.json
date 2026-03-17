@@ -1,0 +1,98 @@
+{
+  "model_performance": [
+    {
+      "model": "Leakage Detector",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "auc_roc": 1.0,
+      "training_time_s": 1.152181625366211,
+      "inference_time_ms": 0.0046511411666870115,
+      "confusion_matrix": {
+        "TN": 9800,
+        "FP": 0,
+        "FN": 0,
+        "TP": 200
+      },
+      "FPR": 0.0,
+      "FNR": 0.0
+    },
+    {
+      "model": "Corrosion Detector",
+      "accuracy": 0.9983,
+      "precision": 1.0,
+      "recall": 0.8721804511278195,
+      "f1_score": 0.931726907630522,
+      "auc_roc": 0.9998635994059335,
+      "training_time_s": 1.389796495437622,
+      "inference_time_ms": 0.004737305641174317,
+      "confusion_matrix": {
+        "TN": 9867,
+        "FP": 0,
+        "FN": 17,
+        "TP": 116
+      },
+      "FPR": 0.0,
+      "FNR": 0.12781954887218044
+    },
+    {
+      "model": "Overpressure Detector",
+      "accuracy": 0.9999,
+      "precision": 0.9565217391304348,
+      "recall": 1.0,
+      "f1_score": 0.9777777777777777,
+      "auc_roc": 0.999995444523406,
+      "training_time_s": 1.1851158142089844,
+      "inference_time_ms": 0.0032000064849853514,
+      "confusion_matrix": {
+        "TN": 9977,
+        "FP": 1,
+        "FN": 0,
+        "TP": 22
+      },
+      "FPR": 0.00010022048506714773,
+      "FNR": 0.0
+    }
+  ],
+  "baselines": {
+    "leakage": {
+      "Threshold-based": {
+        "accuracy": 0.97,
+        "precision": 0.4,
+        "recall": 1.0,
+        "f1_score": 0.5714285714285715,
+        "training_time_s": 0.0,
+        "inference_time_ms": 0.001
+      },
+      "Isolation Forest": {
+        "accuracy": 0.9562,
+        "precision": 0.31347962382445144,
+        "recall": 1.0,
+        "f1_score": 0.47732696897374705,
+        "training_time_s": 0.3824601173400879,
+        "inference_time_ms": 0.004500007629394532
+      }
+    }
+  },
+  "test_conditions": {
+    "noise_level": 0.08,
+    "subtlety": 0.6,
+    "missing_data_rate": 0.01,
+    "sensor_drift": true
+  },
+  "dataset_info": {
+    "train_samples": 50000,
+    "test_samples": 10000,
+    "features": [
+      "pressure",
+      "temperature",
+      "flow_rate",
+      "H2O",
+      "H2S",
+      "SO2",
+      "O2",
+      "vibration"
+    ]
+  }
+}

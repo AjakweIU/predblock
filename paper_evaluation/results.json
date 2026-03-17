@@ -1,0 +1,27 @@
+{
+  "data_quality": {
+    "dataset_size": 10000,
+    "temporal_coverage_days": 6.944444444444445,
+    "sampling_rate": "1 minute",
+    "anomaly_distribution": {
+      "leakage": {
+        "count": 200,
+        "percentage": 2.0
+      },
+      "corrosion": {
+        "count": 133,
+        "percentage": 1.3299999999999998
+      },
+      "overpressure": {
+        "count": 22,
+        "percentage": 0.22
+      }
+    },
+    "total_anomaly_rate": 3.55,
+    "autocorrelation": {
+      "pressure": 0.958261511721554,
+      "temperature": 0.9565754118172696,
+      "H2O": 0.9890973844434635
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "predblock-purechain-bridge",
+  "version": "1.0.0",
+  "description": "Node.js bridge for PureChain blockchain integration with PredBlock",
+  "main": "purechain_bridge.js",
+  "scripts": {
+    "start": "node purechain_bridge.js",
+    "dev": "nodemon purechain_bridge.js"
+  },
+  "keywords": [
+    "purechain",
+    "blockchain",
+    "bridge",
+    "predblock"
+  ],
+  "author": "PredBlock Team",
+  "license": "MIT",
+  "dependencies": {
+    "purechainlib": "^2.0.8",
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
+}

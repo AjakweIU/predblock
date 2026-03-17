@@ -1,0 +1,110 @@
+{
+  "model_performance": [
+    {
+      "model": "Leakage Detector",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "auc_roc": 1.0,
+      "training_time_s": 1.353130578994751,
+      "inference_time_ms": 0.004800224304199219,
+      "confusion_matrix": {
+        "TN": 9800,
+        "FP": 0,
+        "FN": 0,
+        "TP": 200
+      },
+      "FPR": 0.0,
+      "FNR": 0.0,
+      "feature_importance": {
+        "pressure": 0.4621636242924683,
+        "temperature": 0.0015789277491068063,
+        "flow_rate": 0.0016080281549306953,
+        "H2O": 0.0003858327417424415,
+        "H2S": 0.0010302064359315054,
+        "SO2": 0.0013029969371402754,
+        "O2": 0.3229906974978517,
+        "vibration": 0.20893968619082834
+      }
+    },
+    {
+      "model": "Corrosion Predictor",
+      "accuracy": 0.9998,
+      "precision": 1.0,
+      "recall": 0.9849624060150376,
+      "f1_score": 0.9924242424242424,
+      "auc_roc": 1.0,
+      "training_time_s": 1.3982017040252686,
+      "inference_time_ms": 0.0031556606292724608,
+      "confusion_matrix": {
+        "TN": 9867,
+        "FP": 0,
+        "FN": 2,
+        "TP": 131
+      },
+      "FPR": 0.0,
+      "FNR": 0.015037593984962405
+    },
+    {
+      "model": "Overpressure Detector",
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "auc_roc": 0.9999999999999999,
+      "training_time_s": 1.1821215152740479,
+      "inference_time_ms": 0.004662561416625977,
+      "confusion_matrix": {
+        "TN": 9978,
+        "FP": 0,
+        "FN": 0,
+        "TP": 22
+      },
+      "FPR": 0.0,
+      "FNR": 0.0
+    }
+  ],
+  "baselines": {
+    "leakage": {
+      "Threshold-based": {
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0,
+        "training_time_s": 0.0,
+        "inference_time_ms": 0.001
+      },
+      "Isolation Forest": {
+        "accuracy": 0.9633,
+        "precision": 0.3527336860670194,
+        "recall": 1.0,
+        "f1_score": 0.5215123859191656,
+        "training_time_s": 0.47234129905700684,
+        "inference_time_ms": 0.006121253967285156
+      },
+      "One-Class SVM": {
+        "accuracy": 0.9579,
+        "precision": 0.3037300177619893,
+        "recall": 0.855,
+        "f1_score": 0.44823066841415465,
+        "training_time_s": 10.252140998840332,
+        "inference_time_ms": 0.26050615310668945
+      }
+    }
+  },
+  "dataset_info": {
+    "train_samples": 50000,
+    "test_samples": 10000,
+    "features": [
+      "pressure",
+      "temperature",
+      "flow_rate",
+      "H2O",
+      "H2S",
+      "SO2",
+      "O2",
+      "vibration"
+    ]
+  }
+}
