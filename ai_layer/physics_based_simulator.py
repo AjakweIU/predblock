@@ -86,7 +86,7 @@ class CO2Properties:
         if (cls._spline is not None
                 and cls._P_min <= p <= cls._P_max
                 and cls._T_min <= t <= cls._T_max):
-            rho = float(cls._spline(t, p))
+            rho = float(cls._spline(t, p, grid=False))
             return np.clip(rho, 50, 1200)
         
         # Out of range — use legacy fallback
